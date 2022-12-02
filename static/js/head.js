@@ -31,9 +31,6 @@
                         },
                     },
                     physics: true,
-                    manipulation: {
-                        enabled: true,
-                    },
                     interaction: {
                         navigationButtons: true,
                         tooltipDelay: 200,
