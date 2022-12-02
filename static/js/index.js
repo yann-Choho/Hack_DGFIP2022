@@ -6,7 +6,7 @@
             var config = {
                 containerId: "viz",
                 neo4j: {
-                    serverUrl: "bolt://34.77.218.69:7687",
+                    serverUrl: "bolt://34.77.218.69:7687/websocket",
                     serverUser: "neo4j",
                     serverPassword: "azerty"
                 },
