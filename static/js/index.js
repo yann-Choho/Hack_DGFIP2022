@@ -6,7 +6,7 @@
             var config = {
                 containerId: "viz",
                 neo4j: {
-                    serverUrl: "bolt://34.77.218.69:7687/websocket",
+                    serverUrl: "bolt://34.77.218.69:7687",
                     serverUser: "neo4j",
                     serverPassword: "azerty"
                 },
@@ -115,7 +115,7 @@ setTimeout(function () {
             4
         );
     })
-    // Désactiver le clique droit 
+    // Désactiver le clique droit
     document.addEventListener('contextmenu', event => event.preventDefault());
     viz.network.on("oncontext", function (params) {
         console.log(params);
