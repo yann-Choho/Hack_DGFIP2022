@@ -26,14 +26,14 @@
     <script type="text/javascript" src="static/js/index.js"></script>
 </head>
 
-<body onload="draw()">
+<body onload="draw();">
     <div class="container" style="margin-top: 2%;">
         <div class="row">
             <div class="col" style="padding-top: 1%">
                 <img src="./static/1280px-Logo_DGFP-fr.svg.png" alt="logo_dgfip" height="150px" />
             </div>
             <div class="col-6" style="text-align: center; padding-top: 2%; font-family: monospace;">
-                <h1 style="font-size: 5em">Hackathon 2022</h1>
+                <h1 style="font-size: 4em">Hackathon 2022</h1>
                 <h1 style="font-size: 2em">Lutte Contre la Fraude & Crypto</h1>
             </div>
             <div class="col">
@@ -77,7 +77,7 @@
                     data-target="#exampleModal">Régler les paramètres</button>
             </div>
             <div class="col">
-                <button class="btn btn-success" style="width: 100%; font-size: 1.4em;">Lancer la requête</button>
+                <button class="btn btn-success" style="width: 100%; font-size: 1.4em;" onclick="nouveau()">Lancer la requête</button>
             </div>
         </div>
     </div>
@@ -99,9 +99,9 @@
                                 <label for="transac_select" class="form-label mt-4" style="font-size:1.2em">Type de
                                     transactions</label>
                                 <select class="form-select" id="transac_select">
-                                    <option>Toutes transactions</option>
-                                    <option>Envois</option>
-                                    <option>Réceptions</option>
+                                    <option value="tout">Toutes transactions</option>
+                                    <option value="envoie">Envois</option>
+                                    <option value="recois">Réceptions</option>
                                 </select>
                             </div>
                             <span class="border-bottom" style="padding-top: 3%;"></span>
@@ -141,9 +141,9 @@
                         </div>
                         <div class="row" style="padding-top: 3%;">
                             <div class="form-group">
-                                <label for="max_amount" class="form-label" style="font-size:1.2em">Montant minimum
+                                <label for="max_amount" class="form-label" style="font-size:1.2em">Montant minimum (ETH)
                                     :</label>
-                                <input type="range" class="form-range" min="0" max="100" value="0" step="5"
+                                <input type="range" class="form-range" min="0" max="2" value="0" step="0.05"
                                     id="max_amount" oninput="this.nextElementSibling.value = this.value">
                                 <output style="font-size:1.2em">0</output>
                             </div>
@@ -178,32 +178,17 @@
 
     <div class="container" style="padding-top: 3%;">
         <div class="row">
-            <div class="col-9">
-                <div id="viz" style="width: 100%; height:100%;"></div>
+            <div class="col">
+                <h5>Informations</h5>
+                <pre id="contenu_info" style="height: 120px;"></pre>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 3%;">
+            <div class="col">
+                <div id="viz" style="width: 100%; height:700px; border-style: solid; border-width:1px; border-radius: 10px;"></div>
                 <!--
                     <img src="./static/graph4.png" width="700px">
                 -->
-            </div>
-            <div class="col">
-                <div class="row">
-                    <h5>Informations</h5>
-                    <pre id="contenu_info"></pre>
-                </div>
-                <div class="row">
-                    <div class="col">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
